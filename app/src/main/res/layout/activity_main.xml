@@ -1,173 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/rectangle_5"
-        android:layout_width="279dp"
-        android:layout_height="56dp"
-        android:backgroundTint="#007DFF"
-        android:gravity="center"
-        android:text="@string/ingresar_string"
-        android:textColor="@color/_bg__sign_in_screen_color"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/__olvido_la_contrase_a_"
-        app:layout_constraintVertical_bias="0.149" />
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <EditText
-        android:id="@+id/rectangle_3"
-        android:layout_width="306dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rectangle_3_shape"
-        android:gravity="center_vertical|start"
-        android:hint="@string/ingrese_usuario_string"
-        android:inputType="text"
-        android:paddingStart="16dp"
-        android:textColor="@color/ingrese_usuario_color"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usuario" />
-
-    <EditText
-        android:id="@+id/rectangle_4"
-        android:layout_width="312dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle_3_shape"
-        android:gravity="center_vertical|start"
-        android:hint="@string/ingrese_contrase_a_string"
-        android:inputType="textPassword"
-        android:paddingStart="16dp"
-        android:textColor="@color/ingrese_usuario_color"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contrase_a" />
-
-    <TextView
-        android:id="@+id/usuario"
-        android:layout_width="118dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/usuario_string"
-        android:textColor="@color/usuario_color"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingreso" />
-
-    <TextView
-        android:id="@+id/contrase_a"
-        android:layout_width="174dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/contrase_a_string"
-        android:textColor="@color/usuario_color"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_3" />
-
-    <TextView
-        android:id="@+id/__olvido_la_contrase_a_"
-        android:layout_width="147dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/__olvido_la_contrase_a__string"
-        android:textColor="@color/ingreso_color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_4" />
-
-
-    <TextView
-        android:id="@+id/__no_tiene_cuenta_"
-        android:layout_width="126.4dp"
-        android:layout_height="21.4dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:text="@string/__no_tiene_cuenta__string"
-        android:textColor="@color/usuario_color"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_5" />
-
-    <TextView
-        android:id="@+id/registrese"
-        android:layout_width="76.4dp"
-        android:layout_height="21.4dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:text="@string/registrese_string"
-        android:textColor="@color/registrese_color"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/__no_tiene_cuenta_"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle_5" />
-
-    <ImageView
-        android:id="@+id/vector"
-        android:layout_width="28dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="vector"
-        android:src="@drawable/vector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/ingreso"
-        android:layout_width="102dp"
-        android:layout_height="37.5dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/ingreso_string"
-        android:textColor="@color/ingreso_color"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoandroid2_1" />
-
-    <RelativeLayout
-        android:id="@+id/____icon__eye_outline_"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="295dp"
-        android:layout_marginTop="509dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/bottomAppBar"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="50dp">
 
-    <ImageView
-        android:id="@+id/logoandroid2_1"
-        android:layout_width="224dp"
-        android:layout_height="217dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="logoandroid2_1"
-        android:src="@drawable/logoandroid2_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomNavigationView"
+            android:layout_marginEnd="20dp"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconSize="36dp"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_menu"
+            app:itemIconTint="@drawable/icon_tint_selector"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:id="@+id/dialogForgot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogBox"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/white_box">
+
+        <TextView
+            android:id="@+id/forgotTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/forgot_shape"
+            android:text="¿Tienes problemas para entrar?"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:text="Introduce tu correo electrónico:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/emailBox"
+            app:layout_constraintStart_toStartOf="@+id/emailBox"
+            app:layout_constraintTop_toBottomOf="@id/forgotTitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/emailBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rectangle_3_shape"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:textColor="@color/ingrese_usuario_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forgotTitle"
+            app:layout_constraintVertical_bias="0.455" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnCancel"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="10dp"
+            android:text="Cancelar"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_5_shape"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailBox"
+            app:layout_constraintBottom_toBottomOf="@id/dialogBox"
+            app:layout_constraintEnd_toStartOf="@id/btnReset"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnReset"
+            android:text="Enviar"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@drawable/rectangle_5_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/dialogBox"
+            app:layout_constraintStart_toEndOf="@id/btnCancel"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

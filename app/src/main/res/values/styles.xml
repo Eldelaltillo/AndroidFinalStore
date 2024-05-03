@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- Tema para el splash screen -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Personaliza el tema según sea necesario -->
+    </style>
+
+    <!-- Tema para el MainActivity -->
+    <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Personaliza el tema según sea necesario -->
+        <!-- Cambiar el color de fondo de la barra de estado -->
+        <item name="android:statusBarColor">@android:color/white</item>
+
+        <!-- Asegurar que los iconos en la barra de estado sean oscuros -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+        
+</resources>

@@ -14,11 +14,24 @@
 	<color name="white">#FFFFFFFF</color>
 
 	<color name="_bg__sign_in_screen_color">#FFFFFF</color>
+	<color name="grey_bg">#C3C3C3</color>
 	<color name="_bg______icon__arrow_left__ek1_color">#000000</color>
+	<color name="registro_color">#007DFF</color>
+	<color name="cybertech_color">#4E4B4B</color>
+	<color name="encuentra_tu_pc__laptop_o_gpu_ideal__color">#838181</color>
 	<color name="ingreso_color">#007DFF</color>
 	<color name="usuario_color">#4E4B4B</color>
 	<color name="ingrese_usuario_color">#838181</color>
 	<color name="registrese_color">#3A99FC</color>
 	<color name="_9_30_color">#191C1B</color>
 	<color name="camera_ek2_color">#2E2E2E</color>
+
+	<color name="_bg__group_8_color">#FFFFFF</color>
+	<color name="add_to_cart_color">#007DFF</color>
+	<color name="_512_gb_color">#4E4B4B</color>
+	<color name="asus_tuf_f15_color">#000000</color>
+	<color name="apples_red_fresh_mellow_juicy_perfect_whole_white_desk_1_color">#ffffff</color>
+	<color name="__10__color">#D58000</color>
+	<color name="ellipse_2_color">#3A99FC</color>
+	<color name="rectangle_19_color">#34FF9900</color>
 </resources>

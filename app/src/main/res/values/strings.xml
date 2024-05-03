@@ -9,5 +9,16 @@
     <string name="__olvido_la_contrase_a__string">¿Olvido la contraseña?</string>
     <string name="ingresar_string">Ingresar</string>
     <string name="__no_tiene_cuenta__string">¿No tiene cuenta?</string>
-    <string name="registrese_string">Registrese</string>
+    <string name="registrese_string">Registrarme</string>
+    <string name="usuario">Usuario</string>
+    <string name="ingrese_usuario">Ingrese usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="ingrese_contrase_a">Ingrese contraseña</string>
+    <string name="confirme_contrase_a">Confirme contraseña</string>
+    <string name="title_activity_nav_bar">NavBar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

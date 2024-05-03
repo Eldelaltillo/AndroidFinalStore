@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splash">
+
+    <ImageView
+        android:id="@+id/__pngtree_cartoon_minimalistic_computer_element_4050636_1"
+        android:layout_width="240dp"
+        android:layout_height="331dp"
+        android:contentDescription="__pngtree_cartoon_minimalistic_computer_element_4050636_1"
+        android:src="@drawable/__pngtree_cartoon_minimalistic_computer_element_4050636_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <TextView
+        android:id="@+id/cybertech"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:fontFamily="@font/teko_light"
+        android:gravity="center"
+        android:text="CYBERTECH"
+        android:textColor="@color/cybertech_color"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/__pngtree_cartoon_minimalistic_computer_element_4050636_1"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/emporium"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:fontFamily="@font/teko_light"
+        android:text="EMPORIUM"
+        android:textColor="@color/cybertech_color"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cybertech"
+        app:layout_constraintStart_toStartOf="@+id/cybertech"
+        app:layout_constraintTop_toBottomOf="@+id/cybertech" />
+
+    <TextView
+        android:id="@+id/encuentra_tu_pc__laptop_o_gpu_ideal_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/teko_light"
+        android:gravity="center"
+        android:text="Encuentra tu PC, laptop o GPU ideal."
+        android:textColor="@color/encuentra_tu_pc__laptop_o_gpu_ideal__color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/emporium"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="@+id/emporium"
+        app:layout_constraintTop_toBottomOf="@+id/emporium" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rectangle_5_shape"
+        android:fontFamily="@font/teko_light"
+        android:paddingTop="2dp"
+        android:text="¡Ingresa ya!"
+        android:textColor="@color/_bg__sign_in_screen_color"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encuentra_tu_pc__laptop_o_gpu_ideal_"
+        app:layout_constraintVertical_bias="0.312" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

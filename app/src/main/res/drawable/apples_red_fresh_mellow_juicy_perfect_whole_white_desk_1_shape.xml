@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- apples_red_fresh_mellow_juicy_perfect_whole_white_desk_1 from your XD file. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle" >
+	<corners android:radius="9.68dp" />
+	<solid android:color="@color/apples_red_fresh_mellow_juicy_perfect_whole_white_desk_1_color" />
+</shape>
+

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Sign_in">
+
+    <ImageView
+        android:id="@+id/vectorAtras"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="vector"
+        android:src="@drawable/return_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoandroid2_1"
+        android:layout_width="224dp"
+        android:layout_height="217dp"
+        android:contentDescription="logoandroid2_1"
+        android:src="@drawable/logoandroid2_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Registro"
+        android:textColor="@color/ingreso_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoandroid2_1"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <TextView
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usuario"
+        android:textColor="@color/usuario_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/ingreso"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <EditText
+        android:id="@+id/inputUsuario"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="@string/ingrese_usuario"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuario"
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:textColor="@color/usuario_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/inputUsuario"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <EditText
+        android:id="@+id/inputCorreo"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="Ingrese correo"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correo"
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@color/usuario_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputName"
+        app:layout_constraintTop_toBottomOf="@+id/inputCorreo"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="Ingrese nombre"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contrase_a"
+        android:textColor="@color/usuario_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputName"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="@string/ingrese_contrase_a"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rectangle_5_shape"
+        android:text="Registrarte"
+        android:textColor="@color/_bg__sign_in_screen_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistrar"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:layout_constraintVertical_bias="0.228">
+
+        <TextView
+            android:id="@+id/__no_tiene_cuenta_"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="¿Tienes una cuenta?"
+            android:textColor="@color/usuario_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/registrese"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10px"
+            android:gravity="center"
+            android:text="Entrar"
+            android:textColor="@color/registrese_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

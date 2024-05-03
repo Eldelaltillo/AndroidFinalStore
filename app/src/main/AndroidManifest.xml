@@ -13,7 +13,17 @@
         android:theme="@style/Theme.ProyectoFinal"
         tools:targetApi="31">
         <activity
+            android:name=".Seguridad"
+            android:exported="false" />
+        <activity
+            android:name=".updateInfo"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/MainActivityTheme" />
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +31,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Sign_up"
+            android:exported="false" />
+        <activity
+            android:name=".Sign_in"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Seguridad">
+
+
+
+    <ImageView
+        android:id="@+id/vectorAtras"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="vector"
+        android:src="@drawable/return_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Seguridad"
+        android:textColor="@color/ingreso_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña antigua"
+        android:textColor="@color/usuario_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ingreso"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="Antigua contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.015"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/newpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva contraseña"
+        android:textColor="@color/usuario_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputnewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintVertical_bias="0.030" />
+
+    <EditText
+        android:id="@+id/inputnewPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="Ingrese nueva contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newpassword"
+        app:layout_constraintVertical_bias="0.02"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/cnpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar nueva contraseña"
+        android:textColor="@color/usuario_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputcnPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputnewPassword"
+        app:layout_constraintVertical_bias="0.030" />
+
+    <EditText
+        android:id="@+id/inputcnPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3_shape"
+        android:gravity="center_vertical|start"
+        android:hint="Confirme Nueva Contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/ingrese_usuario_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cnpassword"
+        app:layout_constraintVertical_bias="0.029"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnactualizar"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:background="@drawable/rectangle_5_shape"
+        android:text="Actualizar"
+        android:textColor="@color/_bg__sign_in_screen_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputcnPassword"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/inputcnPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputcnPassword"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_5_shape"
+        android:text="Eliminar Cuenta"
+        android:textColor="@color/_bg__sign_in_screen_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputcnPassword"
+        app:layout_constraintVertical_bias="0.797" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
