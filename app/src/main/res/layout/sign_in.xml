@@ -128,18 +128,6 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/vectorAtras"
-        android:layout_width="28dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="vector"
-        android:src="@drawable/return_arrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/ingreso"
         android:layout_width="wrap_content"

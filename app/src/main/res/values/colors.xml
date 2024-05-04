@@ -12,12 +12,15 @@
 	<color name="teal_700">#FF018786</color>
 	<color name="black">#FF000000</color>
 	<color name="white">#FFFFFFFF</color>
+	<color name="grey">#B5B5B5</color>
 
 	<color name="_bg__sign_in_screen_color">#FFFFFF</color>
-	<color name="grey_bg">#C3C3C3</color>
+	<color name="principalblue">#007DFF</color>
+	<color name="grey_bg">#E6E6E6</color>
 	<color name="_bg______icon__arrow_left__ek1_color">#000000</color>
 	<color name="registro_color">#007DFF</color>
 	<color name="cybertech_color">#4E4B4B</color>
+	<color name="priceColor">#00448B</color>
 	<color name="encuentra_tu_pc__laptop_o_gpu_ideal__color">#838181</color>
 	<color name="ingreso_color">#007DFF</color>
 	<color name="usuario_color">#4E4B4B</color>

@@ -29,20 +29,10 @@ public class Sign_up extends AppCompatActivity {
 
     //Registro con Realtime Database
     public EditText signupNameDB;
-    public EditText signupEmailDB;
     public EditText signupUsernameDB;
-    public EditText signupPasswordDB;
-
-    Button signupButtonDB;
-
-    FirebaseDatabase database;
-
-    DatabaseReference reference;
-
-    //
 
     private FirebaseAuth auth;
-    private EditText signupName, signupEmail, signupUsername, signupPassword;
+    private EditText  signupEmail,  signupPassword;
     public Button signupButton;
 
 
@@ -62,20 +52,7 @@ public class Sign_up extends AppCompatActivity {
 
         // Registro con Realtime Database
         signupNameDB  = findViewById(R.id.inputName);
-        signupEmailDB  = findViewById(R.id.inputCorreo);
         signupUsernameDB  = findViewById(R.id.inputUsuario);
-        signupPasswordDB  = findViewById(R.id.inputPassword);
-        signupButtonDB  = findViewById(R.id.btnRegistrar);
-
-        /*
-        signupButtonDB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });*/
-        //
 
         auth = FirebaseAuth.getInstance();
         signupEmail = findViewById(R.id.inputCorreo);
@@ -86,9 +63,12 @@ public class Sign_up extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!validateName()|!validateEmail()|!validateUsername()|!validatePassword()){
+                String user = signupEmail.getText().toString().trim();
+                String pass = signupPassword.getText().toString().trim();
 
-                }else{
+                if (!validateName()|!validateEmail()|!validateUsername()|!validatePassword()){
+                    return;
+                }/*else{
                     database = FirebaseDatabase.getInstance();
                     reference = database.getReference("users");
 
@@ -103,17 +83,16 @@ public class Sign_up extends AppCompatActivity {
                     Toast.makeText(Sign_up.this, "Te has registrado",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Sign_up.this, Sign_in.class);
                     startActivity(intent);
-                }
+                }*/
 
-                String user = signupEmail.getText().toString().trim();
-                String pass = signupPassword.getText().toString().trim();
+                /*
 
                 if (user.isEmpty()){
                     signupEmail.setError("Email cannot be empty");
                 }
                 if(pass.isEmpty()){
                     signupPassword.setError("Password cannot be empty");
-                }else{
+                }*/else{
                     auth.createUserWithEmailAndPassword(user,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -125,14 +104,15 @@ public class Sign_up extends AppCompatActivity {
                                 // Guarda los datos adicionales del usuario en Firebase Realtime Database
                                 DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
                                 userRef.child("name").setValue(signupNameDB.getText().toString());
-                                userRef.child("email").setValue(signupEmailDB.getText().toString());
+                                userRef.child("email").setValue(signupEmail.getText().toString());
                                 userRef.child("username").setValue(signupUsernameDB.getText().toString());
-                                userRef.child("password").setValue(signupPasswordDB.getText().toString());
+                                userRef.child("password").setValue(signupPassword.getText().toString());
 
                                 // Notifica al usuario sobre el registro exitoso
                                 Toast.makeText(Sign_up.this, "Registro Completo", Toast.LENGTH_SHORT).show();
                                 // Inicia la actividad de inicio de sesión
                                 startActivity(new Intent(Sign_up.this, Sign_in.class));
+                                finish();
                             }else {
                                 Toast.makeText(Sign_up.this, "Registro Fallido"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
@@ -171,16 +151,16 @@ public class Sign_up extends AppCompatActivity {
     }
 
     public Boolean validateEmail(){
-        String val = signupEmailDB.getText().toString();
+        String val = signupEmail.getText().toString();
 
         if (val.isEmpty()){
-            signupEmailDB.setError("No puede estar vacio");
+            signupEmail.setError("No puede estar vacio");
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(val).matches()) {
-            signupEmailDB.setError("Email inválido");
+            signupEmail.setError("Email inválido");
             return false;
         }else {
-            signupEmailDB.setError(null);
+            signupEmail.setError(null);
             return true;
         }
     }
@@ -197,12 +177,12 @@ public class Sign_up extends AppCompatActivity {
     }
 
     public Boolean validatePassword(){
-        String val = signupPasswordDB.getText().toString();
+        String val = signupPassword.getText().toString();
         if (val.isEmpty()){
-            signupPasswordDB.setError("No puede estar vacio");
+            signupPassword.setError("No puede estar vacio");
             return false;
         }else {
-            signupPasswordDB.setError(null);
+            signupPassword.setError(null);
             return true;
         }
     }

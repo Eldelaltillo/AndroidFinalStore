@@ -1,6 +1,7 @@
 package com.example.proyectofinal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -18,9 +19,24 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Splash extends AppCompatActivity {
 
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String SPLASH_DISPLAYED_KEY = "splashDisplayed";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Obtener SharedPreferences
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean splashDisplayed = preferences.getBoolean(SPLASH_DISPLAYED_KEY, false);
+
+        // Si el splash screen ya se ha mostrado, inicia directamente la actividad de inicio de sesión
+        if (splashDisplayed) {
+            iniciarActividadDeInicioDeSesion();
+            return;
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.splash);
 
@@ -56,6 +72,7 @@ public class Splash extends AppCompatActivity {
                  Intent intent = new Intent(Splash.this, Sign_in.class);
                  // Iniciar SignInActivity
                  startActivity(intent);
+                 finish();
              }
          });
 
@@ -64,6 +81,12 @@ public class Splash extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    private void iniciarActividadDeInicioDeSesion() {
+        Intent intent = new Intent(Splash.this, Sign_in.class);
+        startActivity(intent);
+        // Finalizar la actividad actual
+        finish();
     }
 
 

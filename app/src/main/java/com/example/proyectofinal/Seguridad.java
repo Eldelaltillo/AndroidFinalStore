@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Seguridad extends AppCompatActivity {
 
@@ -32,6 +35,14 @@ public class Seguridad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_seguridad);
+
+        ImageView imageView = findViewById(R.id.vectorAtras);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         mContraseñaActualEditText = findViewById(R.id.inputPassword);
         mNuevaContraseñaEditText = findViewById(R.id.inputnewPassword);
@@ -120,19 +131,34 @@ public class Seguridad extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 // Contraseña actual correcta, proceder con la eliminación de la cuenta
-                                user.delete()
+                                // Antes de eliminar la cuenta, también eliminamos los datos del usuario de la base de datos
+                                String userId = user.getUid();
+                                DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
+                                userRef.removeValue()
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
-                                                    Toast.makeText(Seguridad.this, "Cuenta eliminada correctamente", Toast.LENGTH_SHORT).show();
-                                                    // Iniciar la actividad de inicio de sesión
-                                                    Intent intent = new Intent(Seguridad.this, Sign_in.class);
-                                                    startActivity(intent);
-                                                    // Cerrar la actividad actual
-                                                    finish();
+                                                    // Ahora eliminamos la cuenta del usuario
+                                                    user.delete()
+                                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                @Override
+                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                    if (task.isSuccessful()) {
+                                                                        Toast.makeText(Seguridad.this, "Cuenta eliminada correctamente", Toast.LENGTH_SHORT).show();
+                                                                        // Iniciar la actividad de inicio de sesión
+                                                                        Intent intent = new Intent(Seguridad.this, Sign_in.class);
+                                                                        startActivity(intent);
+                                                                        // Cerrar la actividad actual
+                                                                        finish();
+                                                                    } else {
+                                                                        Toast.makeText(Seguridad.this, "Error al eliminar la cuenta", Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                }
+                                                            });
                                                 } else {
-                                                    Toast.makeText(Seguridad.this, "Error al eliminar la cuenta", Toast.LENGTH_SHORT).show();
+                                                    // Error al eliminar los datos del usuario de la base de datos
+                                                    Toast.makeText(Seguridad.this, "Error al eliminar los datos del usuario", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
