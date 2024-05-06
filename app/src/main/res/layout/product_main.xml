@@ -2,26 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="138dp"
-    android:layout_height="169dp">
+    android:layout_width="160dp"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/product_popular_card"
+    android:elevation="10dp">
 
-    <TextView
-        android:id="@+id/añadirCarrito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="4dp"
-        android:gravity="center"
-        android:text="añadir al carrito"
-        android:textColor="@color/add_to_cart_color"
-        android:textSize="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ellipse_2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/__________________________"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/nombreProducto"
@@ -32,10 +19,16 @@
         android:layout_marginEnd="31dp"
         android:gravity="center"
         android:text="ASUS TUF F15"
+        android:textAllCaps="true"
         android:textColor="@color/asus_tuf_f15_color"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/precioProducto" />
 
@@ -44,11 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="$3.099.000"
         android:textColor="@color/add_to_cart_color"
-        android:textSize="10sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,19 +52,23 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/carritoLO"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreProducto">
+        app:layout_constraintTop_toBottomOf="@+id/nombreProducto"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/almacenamiento"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal|center"
             android:gravity="center"
             android:text="512 gb"
             android:textColor="@color/_512_gb_color"
-            android:textSize="8sp" />
+            android:textSize="13sp"
+            android:textAllCaps="true"/>
 
         <TextView
             android:id="@+id/ram"
@@ -84,7 +80,9 @@
             android:gravity="center"
             android:text="8gb"
             android:textColor="@color/_512_gb_color"
-            android:textSize="8sp" />
+            android:textSize="13sp"
+
+            android:textAllCaps="true"/>
 
         <TextView
             android:id="@+id/grafica"
@@ -94,70 +92,88 @@
             android:gravity="center"
             android:text="rtx 3050"
             android:textColor="@color/_512_gb_color"
-            android:textSize="8sp" />
+            android:textSize="13sp"
+
+            android:textAllCaps="true"/>
     </LinearLayout>
 
-    <View
-        android:id="@+id/ellipse_2"
-        android:layout_width="23dp"
-        android:layout_height="23dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/ellipse_2_shape"
+    <LinearLayout
+        android:id="@+id/carritoLO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center"
+        android:orientation="vertical"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/añadirCarrito" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/__________________________"
-        android:layout_width="113dp"
-        android:layout_height="27dp"
-        android:layout_gravity="center_horizontal|center"
-        android:layout_marginBottom="4dp"
-        android:gravity="center"
-        android:text="___________________________"
-        android:textColor="@color/add_to_cart_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ellipse_2"
-        app:layout_constraintStart_toStartOf="parent" />
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/border_dashed_blue"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="31dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/rectangle_19_shape"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <TextView
-            android:id="@+id/descuentoProducto"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="-10%"
-            android:textColor="@color/__10__color"
-            android:textSize="11sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/añadirCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Añadir al carrito"
+                android:textColor="@color/add_to_cart_color"
+                android:textSize="13dp" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ellipse_2_shape"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ordersproduct" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/descuentoProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_19_shape"
+        android:gravity="center"
+        android:text="-10%"
+        android:textColor="@color/__10__color"
+        android:textSize="15sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imagenProducto"
-        android:layout_width="94dp"
-        android:layout_height="76dp"
+        android:layout_width="108dp"
+        android:layout_height="82dp"
         android:contentDescription="asus_tuf_gaming_f15_1"
         android:src="@drawable/f15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.169" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

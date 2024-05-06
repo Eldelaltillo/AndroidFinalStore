@@ -41,6 +41,8 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.glide)
+    implementation(libs.gson)
     testImplementation(libs.junit)
     implementation(libs.appcompat)
     implementation(libs.material)
