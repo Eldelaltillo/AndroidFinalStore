@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="60dp"
     tools:context=".cartFragment">
 
     <TextView
@@ -18,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingTop="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,11 +42,12 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/teko_light"
                     android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:fontFamily="@font/teko_light"
                     android:gravity="center"
-                    android:text="Carrito"
+                    android:text="Mi carrito"
+                    android:textAllCaps="true"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="34sp"
@@ -54,13 +57,16 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/view3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="Resumen de compra"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -70,6 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@color/grey_bg"
                 android:padding="12dp">
 
@@ -149,12 +157,14 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rectangle_5_shape"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rectangle_5_shape"
+                android:text="Comprar carrito"
                 android:textColor="@color/_bg__sign_in_screen_color"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Comprar carrito" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

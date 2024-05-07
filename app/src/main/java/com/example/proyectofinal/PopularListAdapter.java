@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
+import com.example.proyectofinal.Helper.ManagmentCart;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.DecimalFormat;
@@ -79,7 +80,22 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
         holder.itemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Realizar la acción deseada al hacer clic en el layout
+                Context context = holder.itemView.getContext();
+
+                // Verifica si la posición es válida
+                int position = holder.getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    // Obtén el PopularDomain seleccionado basado en la posición en el adaptador
+                    PopularDomain selectedItem = items.get(position);
+
+                    // Crea una instancia de ManagmentCart utilizando el contexto
+                    ManagmentCart managementCart = new ManagmentCart(context);
+
+                    // Inserta el PopularDomain seleccionado en el carrito
+                    managementCart.insertFood(selectedItem);
+
+                }
+
 
                 // Obtén una referencia al BottomNavigationView que contiene tu menú
                 BottomNavigationView bottomNavigationView = ((Activity) holder.itemView.getContext()).findViewById(R.id.bottomNavigationView);

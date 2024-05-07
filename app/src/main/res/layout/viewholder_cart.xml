@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@color/grey_bg">
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/product_popular_card"
+    android:elevation="10dp">
 
     <LinearLayout
         android:id="@+id/featuresProducto"
@@ -24,6 +25,7 @@
             android:layout_gravity="center_horizontal|center"
             android:gravity="center"
             android:text="512 gb"
+            android:textAllCaps="true"
             android:textColor="@color/_512_gb_color" />
 
         <TextView
@@ -35,6 +37,7 @@
             android:layout_marginEnd="5dp"
             android:gravity="center"
             android:text="8gb"
+            android:textAllCaps="true"
             android:textColor="@color/_512_gb_color" />
 
         <TextView
@@ -44,24 +47,25 @@
             android:layout_gravity="center_horizontal|center"
             android:gravity="center"
             android:text="rtx 3050"
+            android:textAllCaps="true"
             android:textColor="@color/_512_gb_color" />
     </LinearLayout>
 
     <View
         android:id="@+id/view2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/pic"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
@@ -70,22 +74,32 @@
 
     <TextView
         android:id="@+id/titleTxt"
+        style="@style/textStyleBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        style="@style/textStyleBold"
-        android:text="title"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Esta es una prueba para ver como se ve con un texto lago"
+        android:textAllCaps="true"
         android:textColor="@color/black"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/totalEachItem"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constrainedWidth="true"/>
 
     <TextView
         android:id="@+id/feeEachItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="$0"
-        android:textStyle="bold"
         android:textColor="@color/priceColor"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/titleTxt" />
 
@@ -94,8 +108,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="$0"
+        android:text="$100.000.000"
         android:textColor="@color/priceColor"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/titleTxt" />
 
@@ -108,8 +123,8 @@
 
         <TextView
             android:id="@+id/minusCartBtn"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/background_blue4"
             android:gravity="center"
             android:text="-"
@@ -134,8 +149,8 @@
 
         <TextView
             android:id="@+id/plusCardBtn"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/background_blue4"
             android:gravity="center"
