@@ -1,10 +1,11 @@
 package com.example.proyectofinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -26,7 +27,9 @@ public class cartFragment extends Fragment {
     private TextView totalFeeTxt,taxTxt, deliveryTxt,totalTxt,emptyTxt;
     private double tax;
     private ScrollView scrollView;
-    private ImageView backBtn;
+
+    Button orderNow;
+
 
 
     @Override
@@ -34,6 +37,16 @@ public class cartFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
+
+
+        orderNow = view.findViewById(R.id.buttonPlaceOrder);
+        orderNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LocationMaps.class);
+                startActivity(intent);
+            }
+        });
 
         initView(view);
         managmentCart = new ManagmentCart(getContext());

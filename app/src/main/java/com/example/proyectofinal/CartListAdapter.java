@@ -63,13 +63,20 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         holder.totalEachItem.setText("$" + formattedTotalPrice);
         holder.num.setText(String.valueOf(listItemSelected.get(position).getNumberinCart()));
 
+/*
         int drawableResourceId=holder.itemView.getContext().getResources()
                 .getIdentifier(listItemSelected.get(position).getPicUrl(),"drawable",holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .transform(new GranularRoundedCorners(30,30,30,30))
+                .into(holder.pic);*/
+
+        Glide.with(holder.itemView.getContext())
+                .load(listItemSelected.get(position).getPicUrl()) // Obtiene la URL de la imagen mediante getPicUrl()
+                .transform(new GranularRoundedCorners(30, 30, 0, 0))
                 .into(holder.pic);
+
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(holder.itemView.getContext(),ProductDescription.class); //cambiar a la vista de los detalles del producto

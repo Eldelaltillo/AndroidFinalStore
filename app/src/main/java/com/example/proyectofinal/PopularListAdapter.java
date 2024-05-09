@@ -28,6 +28,74 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.Viewholder> {
+
+
+
+    /*
+    //Codigo base de datos en la nube con API
+
+    private Context mCtx;
+    private List<PopularDomain> productList;
+
+    public PopularListAdapter(Context mCtx, List<PopularDomain> productList) {
+        this.mCtx = mCtx;
+        this.productList = productList;
+    }
+
+    @Override
+    public Viewholder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(mCtx);
+        View view = inflater.inflate(R.layout.product_main, null);
+        return new Viewholder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(Viewholder holder, int position) {
+        PopularDomain product = productList.get(position);
+
+        // Loading the image
+        Glide.with(mCtx)
+                .load(product.getPicUrl())
+                .transform(new GranularRoundedCorners(30, 30, 0, 0))
+                .into(holder.imageView);
+
+        holder.textViewTitle.setText(product.getTitle());
+        holder.textViewRating.setText(String.valueOf(product.getScore()));
+        holder.textViewPrice.setText(String.valueOf(product.getPrice()));
+        holder.textViewStorage.setText(product.getStorage());
+        holder.textViewRAM.setText(product.getRAM());
+        holder.textViewGPU.setText(product.getGPU());
+    }
+
+    @Override
+    public int getItemCount() {
+        return productList.size();
+    }
+
+    class Viewholder extends RecyclerView.ViewHolder {
+
+        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice, textViewStorage, textViewRAM, textViewGPU;
+        ImageView imageView;
+
+        public Viewholder(View itemView) {
+            super(itemView);
+
+            textViewTitle = itemView.findViewById(R.id.nombreProducto);
+            textViewRating = itemView.findViewById(R.id.descuentoProducto);
+            textViewPrice = itemView.findViewById(R.id.precioProducto);
+            textViewStorage = itemView.findViewById(R.id.almacenamiento);
+            textViewRAM = itemView.findViewById(R.id.ram);
+            textViewGPU = itemView.findViewById(R.id.grafica);
+            imageView = itemView.findViewById(R.id.imagenProducto);
+        }
+    }*/
+
+// Aca se separan ambos codigos
+
+
+
+    //Codigo sin base de datos
+
     ArrayList<PopularDomain> items;
     Context context;
 
@@ -63,11 +131,17 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
         holder.RamTxt.setText(""+items.get(position).getRAM());
         holder.GpuTxt.setText(""+items.get(position).getGPU());
 
+        /*
         int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
                 "drawable",holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId).transform(new GranularRoundedCorners(30,30,0,0))
+                .into(holder.pic);*/
+
+        Glide.with(holder.itemView.getContext())
+                .load(items.get(position).getPicUrl()) // Obtiene la URL de la imagen mediante getPicUrl()
+                .transform(new GranularRoundedCorners(30, 30, 0, 0))
                 .into(holder.pic);
 
         holder.itemView.setOnClickListener(v -> {

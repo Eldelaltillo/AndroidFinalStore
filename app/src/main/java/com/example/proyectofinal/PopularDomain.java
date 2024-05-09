@@ -17,7 +17,7 @@ public class PopularDomain implements Serializable {
     public PopularDomain(String title, String description, String storage, String RAM, String GPU, String picUrl, int review, double score, double price) {
         this.title = title;
         this.description = description;
-        Storage = storage;
+        this.Storage = storage;
         this.RAM = RAM;
         this.GPU = GPU;
         this.picUrl = picUrl;
