@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Seguridad">
+    tools:context=".Activities.Seguridad">
 
 
 
@@ -42,7 +42,7 @@
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña antigua"
+        android:text="Contraseña actual"
         android:textColor="@color/usuario_color"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
         android:layout_height="40dp"
         android:background="@drawable/rectangle_3_shape"
         android:gravity="center_vertical|start"
-        android:hint="Antigua contraseña"
+        android:hint="Ingrese contraseña"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"

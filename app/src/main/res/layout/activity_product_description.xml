@@ -5,26 +5,328 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductDescription">
+    tools:context=".Activities.ProductDescription">
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="271dp"
-        android:layout_height="197dp"
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginEnd="-100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse_3" />
+
+    <ImageView
+        android:id="@+id/backBtnDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrowblack" />
+
+
+    <ImageView
+        android:id="@+id/picDescription"
+        android:layout_width="305dp"
+        android:layout_height="246dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/f15" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="237dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="76dp"
-        android:text="Hola! esta es la descripcion del producto pero no esta finalizada..."
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/picDescription"
+        app:layout_constraintVertical_bias="0.108">
+
+
+        <TextView
+            android:id="@+id/itemTxtDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="ASUS TUF Gaming F15"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/priceTxtDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="$3.099.000"
+            android:textColor="@color/principalblue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_13" />
+
+        <TextView
+            android:id="@+id/sobre_este_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Sobre este producto"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/priceTxtDes"
+            app:layout_constraintTop_toBottomOf="@+id/priceTxtDes" />
+
+        <TextView
+            android:id="@+id/descriptionTxtDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="El ASUS TUF Gaming F15 es un portátil gaming diseñado para servirte la victoria en bandeja. Equipado con la GPU GeForce RTX 3050, los juegos de acción rápidos se comportan con fluidez  Ver mas..."
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sobre_este_producto" />
+
+        <RelativeLayout
+            android:id="@+id/group_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/featuresProducto"
+            app:layout_constraintTop_toBottomOf="@+id/featuresProducto">
+
+
+            <RelativeLayout
+                android:id="@+id/____emoji__white_medium_star_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/vector_ek2"
+                    android:layout_width="15dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="vector_ek2"
+                    android:src="@drawable/vector_ek2" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/____emoji__white_medium_star__ek1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/vector_ek3"
+                    android:layout_width="15dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="vector_ek3"
+                    android:src="@drawable/vector_ek3" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/____emoji__white_medium_star__ek2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/vector_ek4"
+                    android:layout_width="15dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="vector_ek4"
+                    android:src="@drawable/vector_ek4" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/____emoji__white_medium_star__ek3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/vector_ek5"
+                    android:layout_width="15dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="vector_ek5"
+                    android:src="@drawable/vector_ek5" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/____emoji__white_medium_star__ek4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/vector_ek6"
+                    android:layout_width="15dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="vector_ek6"
+                    android:src="@drawable/vector_ek6" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ratesTxtDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="(126 reseñas)"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/group_13"
+            app:layout_constraintStart_toEndOf="@+id/group_13" />
+
+        <LinearLayout
+            android:id="@+id/featuresProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="27.5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/itemTxtDes"
+            app:layout_constraintTop_toBottomOf="@+id/itemTxtDes">
+
+            <TextView
+                android:id="@+id/almacenamientoDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="512 gb"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ramDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="8gb"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/graficaDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="rtx 3050"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/groupTxtDes"
+            android:layout_width="wrap_content"
+            android:layout_height="27.5dp"
+            android:layout_gravity="center_horizontal|center"
+            android:gravity="center"
+            android:text="Laptop"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/itemTxtDes"
+            app:layout_constraintStart_toStartOf="@+id/itemTxtDes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_details"
+        app:layout_constraintVertical_bias="0.322"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/addToCartBtn"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rectangle_21_shape"
+            android:drawableStart="@drawable/baseline_add_shopping_cart_24"
+            android:drawablePadding="3dp"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Agregar al carrito"
+            android:textColor="@color/agregar_al_carrito_color"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:background="@drawable/rectangle_22_shape"
+            android:text="Comprar Ahora"
+            android:textColor="@color/rectangle_21_color"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

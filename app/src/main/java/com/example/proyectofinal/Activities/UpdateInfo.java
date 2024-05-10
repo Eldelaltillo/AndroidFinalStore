@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Activities;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.proyectofinal.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class updateInfo extends AppCompatActivity {
+public class UpdateInfo extends AppCompatActivity {
 
     EditText inputName, inputUsername;
     Button updateButton;
@@ -75,7 +76,7 @@ public class updateInfo extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(updateInfo.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateInfo.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -88,7 +89,7 @@ public class updateInfo extends AppCompatActivity {
 
                 // Verificar que los campos no estén vacíos
                 if (TextUtils.isEmpty(newName)  || TextUtils.isEmpty(newUsername) ) {
-                    Toast.makeText(updateInfo.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateInfo.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -98,13 +99,13 @@ public class updateInfo extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(updateInfo.this, "Datos actualizados correctamente", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UpdateInfo.this, "Datos actualizados correctamente", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(updateInfo.this, "Error al actualizar datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UpdateInfo.this, "Error al actualizar datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
             }

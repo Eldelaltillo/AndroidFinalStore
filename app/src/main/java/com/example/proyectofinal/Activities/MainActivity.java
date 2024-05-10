@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Activities;
 
 import android.os.Bundle;
 
@@ -8,6 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.proyectofinal.Fragments.AlertFragment;
+import com.example.proyectofinal.Fragments.CartFragment;
+import com.example.proyectofinal.Fragments.HomeFragment;
+import com.example.proyectofinal.Fragments.OrdersFragment;
+import com.example.proyectofinal.Fragments.ProfileFragment;
+import com.example.proyectofinal.R;
 import com.example.proyectofinal.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,23 +29,23 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        currentFragment = new homeFragment();
-        replaceFragment(new homeFragment());
+        currentFragment = new HomeFragment();
+        replaceFragment(new HomeFragment());
 
         binding.bottomNavigationView.setBackground(null);
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             if (item.getItemId() == R.id.inicio) {
-                currentFragment = new homeFragment();
+                currentFragment = new HomeFragment();
             } else if (item.getItemId() == R.id.pedidos) {
-                currentFragment = new ordersFragment();
+                currentFragment = new OrdersFragment();
             } else if (item.getItemId() == R.id.carrito) {
-                currentFragment = new cartFragment();
+                currentFragment = new CartFragment();
             } else if (item.getItemId() == R.id.notificacion) {
-                currentFragment = new alertFragment();
+                currentFragment = new AlertFragment();
             } else if (item.getItemId() == R.id.perfil) {
-                currentFragment = new profile();
+                currentFragment = new ProfileFragment();
             }
 
             replaceFragment(currentFragment); // Reemplazar el fragmento actual
@@ -51,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void handleOnBackPressed() {
                 // Si el fragmento actual no es el fragmento principal, vuelve al fragmento principal al presionar el botón de retroceso
-                if (!(currentFragment instanceof homeFragment)) {
-                    currentFragment = new homeFragment();
+                if (!(currentFragment instanceof HomeFragment)) {
+                    currentFragment = new HomeFragment();
                     replaceFragment(currentFragment);
                     binding.bottomNavigationView.setSelectedItemId(R.id.inicio); // Actualizar la selección en el BottomNavigationView
                 } else {

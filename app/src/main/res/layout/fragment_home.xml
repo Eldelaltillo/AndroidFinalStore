@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="60dp"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -40,6 +40,7 @@
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <EditText
@@ -96,6 +97,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:text="Categorias"
+                android:visibility="gone"
                 android:textColor="@color/black"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -104,6 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
+                android:visibility="gone"
                 android:orientation="horizontal">
 
                 <LinearLayout

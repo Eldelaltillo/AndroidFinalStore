@@ -46,8 +46,10 @@ dependencies {
     implementation(libs.maps)
     implementation(libs.location)
     implementation(libs.volley)
+    testImplementation ("org.robolectric:robolectric:4.12.1")
     testImplementation ("org.mockito:mockito-junit-jupiter:3.12.4")
     testImplementation ("org.mockito:mockito-core:3.12.4")
+    testImplementation("androidx.test:core-ktx:1.4.0")
     testImplementation(libs.junit)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -58,4 +60,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    androidTestImplementation("androidx.test:core-ktx:1.4.0")
+    androidTestImplementation ("org.robolectric:robolectric:4.6.1")
+    androidTestImplementation ("org.mockito:mockito-core:3.10.0")
 }

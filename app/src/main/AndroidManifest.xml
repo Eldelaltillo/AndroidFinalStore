@@ -2,13 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo"
@@ -16,29 +15,32 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LocationMaps"
+            android:name=".Activities.OrderConfirmed"
             android:exported="false" />
         <activity
-            android:name=".SearchAddress"
+            android:name=".Activities.LocationMapsActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductDescription"
+            android:name=".Activities.SearchAddress"
             android:exported="false" />
         <activity
-            android:name=".Seguridad"
+            android:name=".Activities.ProductDescription"
             android:exported="false" />
         <activity
-            android:name=".updateInfo"
+            android:name=".Activities.Seguridad"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.UpdateInfo"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
             android:exported="false"
-            android:theme="@style/MainActivityTheme"/>
-
+            android:theme="@style/MainActivityTheme" />
         <activity
-            android:name=".Splash"
+            android:name=".Activities.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,18 +48,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Sign_up"
+            android:name=".Activities.SignUp"
             android:exported="false" />
         <activity
-            android:name=".Sign_in"
+            android:name=".Activities.SignIn"
             android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCq4IP4Bb2nGzmx2EFljQF8SnhrOUssIUs"/>
-
+            android:value="AIzaSyCq4IP4Bb2nGzmx2EFljQF8SnhrOUssIUs" />
     </application>
 
 </manifest>

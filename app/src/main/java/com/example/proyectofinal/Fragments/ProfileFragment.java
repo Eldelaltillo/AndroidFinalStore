@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Fragments;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -15,6 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.proyectofinal.R;
+import com.example.proyectofinal.Activities.Seguridad;
+import com.example.proyectofinal.Activities.SignIn;
+import com.example.proyectofinal.Activities.UpdateInfo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -24,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class profile extends Fragment {
+public class ProfileFragment extends Fragment {
 
     private FirebaseAuth mAuth;
 
@@ -72,7 +76,7 @@ public class profile extends Fragment {
             @Override
             public void onClick(View v) {
                 // Crea un Intent para abrir la actividad UpdateInfoActivity
-                Intent intent = new Intent(getActivity(), updateInfo.class);
+                Intent intent = new Intent(getActivity(), UpdateInfo.class);
 
                 // Inicia la actividad
                 startActivity(intent);
@@ -126,7 +130,7 @@ public class profile extends Fragment {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
-                Intent intent = new Intent(getActivity(), Sign_in.class);
+                Intent intent = new Intent(getActivity(), SignIn.class);
                 startActivity(intent);
                 getActivity().finish();
             }

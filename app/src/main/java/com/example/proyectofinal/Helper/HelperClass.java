@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Helper;
 
 public class HelperClass {
     String name,email,username,password;

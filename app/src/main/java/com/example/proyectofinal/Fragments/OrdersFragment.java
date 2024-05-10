@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class ordersFragment extends Fragment {
+import com.example.proyectofinal.R;
+
+public class OrdersFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

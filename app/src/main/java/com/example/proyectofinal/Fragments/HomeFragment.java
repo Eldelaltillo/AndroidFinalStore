@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Fragments;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +15,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.proyectofinal.Helper.PopularDomain;
+import com.example.proyectofinal.Adapters.PopularListAdapter;
+import com.example.proyectofinal.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,9 +25,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class homeFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    private static final String URL_PRODUCTS = "http://192.168.20.137/ApiProyectoFinal/registros.php";
+    private static final String URL_PRODUCTS = "https://androidedyleo2024.000webhostapp.com/registrosStore.php";
 
     private ArrayList<PopularDomain> productList;
     private RecyclerView recyclerView;
@@ -70,7 +73,8 @@ public class homeFragment extends Fragment {
                                         product.getString("picUrl"),
                                         product.getInt("review"),
                                         product.getDouble("score"),
-                                        product.getDouble("price")
+                                        product.getDouble("price"),
+                                        product.getString("categoria")
                                 ));
                             }
                             adapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado

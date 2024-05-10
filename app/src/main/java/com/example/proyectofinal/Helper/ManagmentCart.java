@@ -3,8 +3,6 @@ package com.example.proyectofinal.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.proyectofinal.PopularDomain;
-
 import java.util.ArrayList;
 
 public class ManagmentCart {
@@ -70,5 +68,9 @@ public class ManagmentCart {
             fee = fee + (listItem.get(i).getPrice()*listItem.get(i).getNumberinCart());
         }
         return fee;
+    }
+    public void clearCart() {
+        tiniDB.remove("CartList");
+        Toast.makeText(context, "Carrito vaciado", Toast.LENGTH_SHORT).show();
     }
 }

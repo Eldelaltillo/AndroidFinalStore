@@ -1,16 +1,20 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Activities;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.proyectofinal.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -23,17 +27,29 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class LocationMaps extends FragmentActivity implements OnMapReadyCallback {
+public class LocationMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap gMap;
     private Location currentLocation;
     private FusedLocationProviderClient fusedClient;
     private static final int REQUEST_CODE = 101;
+    Button placeOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_maps);
+
+        placeOrder = this.findViewById(R.id.placeOrderBtn);
+        placeOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LocationMapsActivity.this, OrderConfirmed.class);
+                startActivity(intent);
+                
+                finish();
+            }
+        });
 
         fusedClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
@@ -77,7 +93,7 @@ public class LocationMaps extends FragmentActivity implements OnMapReadyCallback
 
         MarkerOptions fakeMarkerOptions = new MarkerOptions()
                 .position(mapFake)
-                .title("Marcar la ubicación")
+                .title("Ubicación tienda")
                 .icon(icon);
 
         gMap.addMarker(fakeMarkerOptions);

@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +16,8 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.proyectofinal.R;
 
 public class Splash extends AppCompatActivity {
 
@@ -69,7 +71,7 @@ public class Splash extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  // Crear un Intent para iniciar SignInActivity
-                 Intent intent = new Intent(Splash.this, Sign_in.class);
+                 Intent intent = new Intent(Splash.this, SignIn.class);
                  // Iniciar SignInActivity
                  startActivity(intent);
                  finish();
@@ -83,7 +85,7 @@ public class Splash extends AppCompatActivity {
         });
     }
     private void iniciarActividadDeInicioDeSesion() {
-        Intent intent = new Intent(Splash.this, Sign_in.class);
+        Intent intent = new Intent(Splash.this, SignIn.class);
         startActivity(intent);
         // Finalizar la actividad actual
         finish();

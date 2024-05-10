@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Helper;
 
 import java.io.Serializable;
 
@@ -13,8 +13,9 @@ public class PopularDomain implements Serializable {
     private double score; // Cuantas estrellas tiene el producto
     private int numberinCart;
     private double price; // Precio del producto
+    private String Categoria;
 
-    public PopularDomain(String title, String description, String storage, String RAM, String GPU, String picUrl, int review, double score, double price) {
+    public PopularDomain(String title, String description, String storage, String RAM, String GPU, String picUrl, int review, double score, double price,String Categoria) {
         this.title = title;
         this.description = description;
         this.Storage = storage;
@@ -24,6 +25,15 @@ public class PopularDomain implements Serializable {
         this.review = review;
         this.score = score;
         this.price = price;
+        this.Categoria = Categoria;
+    }
+
+    public String getCategoria() {
+        return Categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        Categoria = categoria;
     }
 
     public String getStorage() {

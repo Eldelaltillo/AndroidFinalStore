@@ -37,4 +37,10 @@
 	<color name="__10__color">#D58000</color>
 	<color name="ellipse_2_color">#3A99FC</color>
 	<color name="rectangle_19_color">#34FF9900</color>
+
+	<color name="_bg__frame_193_color">#000000</color>
+	<color name="rectangle_21_color">#FFFFFF</color>
+	<color name="rectangle_22_color">#3A99FC</color>
+	<color name="agregar_al_carrito_color">#007DFF</color>
+
 </resources>

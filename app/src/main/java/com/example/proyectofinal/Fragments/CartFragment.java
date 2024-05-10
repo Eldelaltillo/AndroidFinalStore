@@ -1,4 +1,4 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +13,16 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.proyectofinal.Adapters.CartListAdapter;
 import com.example.proyectofinal.Helper.ChangeNumberItemsListener;
 import com.example.proyectofinal.Helper.ManagmentCart;
+import com.example.proyectofinal.Activities.LocationMapsActivity;
+import com.example.proyectofinal.R;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class cartFragment extends Fragment {
+public class CartFragment extends Fragment {
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerView;
@@ -43,7 +46,7 @@ public class cartFragment extends Fragment {
         orderNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LocationMaps.class);
+                Intent intent = new Intent(getActivity(), LocationMapsActivity.class);
                 startActivity(intent);
             }
         });
@@ -124,7 +127,7 @@ public class cartFragment extends Fragment {
     }
 
     // Método para formatear precios
-    private String formatPrice(double price) {
+    public String formatPrice(double price) {
         NumberFormat formatter = NumberFormat.getInstance(Locale.getDefault());
         formatter.setMaximumFractionDigits(0); // Establecer cero decimales
         return formatter.format(price);

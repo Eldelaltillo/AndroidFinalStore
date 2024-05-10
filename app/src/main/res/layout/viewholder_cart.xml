@@ -19,7 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleTxt">
 
         <TextView
-            android:id="@+id/almacenamiento"
+            android:id="@+id/almacenamientoC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
@@ -29,7 +29,7 @@
             android:textColor="@color/_512_gb_color" />
 
         <TextView
-            android:id="@+id/ram"
+            android:id="@+id/ramC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
@@ -41,7 +41,7 @@
             android:textColor="@color/_512_gb_color" />
 
         <TextView
-            android:id="@+id/grafica"
+            android:id="@+id/graficaC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"

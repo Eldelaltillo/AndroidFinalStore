@@ -1,12 +1,8 @@
-package com.example.proyectofinal;
+package com.example.proyectofinal.Adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,13 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 import com.example.proyectofinal.Helper.ManagmentCart;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.proyectofinal.Helper.PopularDomain;
+import com.example.proyectofinal.Activities.ProductDescription;
+import com.example.proyectofinal.R;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -145,7 +142,7 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
                 .into(holder.pic);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(holder.itemView.getContext(),ProductDescription.class); //cambiar a la vista de los detalles del producto
+            Intent intent = new Intent(holder.itemView.getContext(), ProductDescription.class); //cambiar a la vista de los detalles del producto
             intent.putExtra("object",items.get(position));
             holder.itemView.getContext().startActivity(intent);
         });
@@ -170,7 +167,7 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
 
                 }
 
-
+                /*
                 // Obtén una referencia al BottomNavigationView que contiene tu menú
                 BottomNavigationView bottomNavigationView = ((Activity) holder.itemView.getContext()).findViewById(R.id.bottomNavigationView);
 
@@ -185,7 +182,7 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
                         icon.setColorFilter(ContextCompat.getColor(holder.itemView.getContext(), R.color.registro_color), PorterDuff.Mode.SRC_IN);
                         menuItem.setIcon(icon);
                     }
-                }
+                }*/
             }
         });
     }

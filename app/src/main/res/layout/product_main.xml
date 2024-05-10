@@ -19,7 +19,6 @@
         android:layout_marginEnd="31dp"
         android:gravity="center"
         android:text="ASUS TUF F15"
-        android:textAllCaps="true"
         android:textColor="@color/asus_tuf_f15_color"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -50,6 +49,8 @@
         android:id="@+id/featuresProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/carritoLO"
@@ -66,6 +67,8 @@
             android:layout_gravity="center_horizontal|center"
             android:gravity="center"
             android:text="512 gb"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="@color/_512_gb_color"
             android:textSize="13sp"
             android:textAllCaps="true"/>
@@ -79,6 +82,8 @@
             android:layout_marginEnd="5dp"
             android:gravity="center"
             android:text="8gb"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="@color/_512_gb_color"
             android:textSize="13sp"
 
@@ -91,6 +96,8 @@
             android:layout_gravity="center_horizontal|center"
             android:gravity="center"
             android:text="rtx 3050"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="@color/_512_gb_color"
             android:textSize="13sp"
 
